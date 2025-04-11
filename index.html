@@ -1,129 +1,244 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bono de Bienvenida</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Plataforma Verificada | BC online</title>
+  <link rel="icon" type="image/png" href="http://imgfz.com/i/gG8bTM6.jpeg" />
 
-    <!-- Meta Pixel Code -->
-    <script>
-        !function(f,b,e,v,n,t,s) {
-            if(f.fbq) return; n=f.fbq=function() {
-                n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments)
-            };
-            if(!f._fbq) f._fbq=n; n.push=n; n.loaded=!0; n.version='2.0';
-            n.queue=[]; t=b.createElement(e); t.async=!0;
-            t.src=v; s=b.getElementsByTagName(e)[0];
-            s.parentNode.insertBefore(t,s)
-        }(window, document, 'script', 'https://connect.facebook.net/es_LA/fbevents.js');
-        fbq('init', '4013675132213135'); // Reemplaza con tu ID de Pixel
-        fbq('track', 'PageView'); // Evento de vista de página
-    </script>
-    <noscript>
-        <img height="1" width="1" style="display:none"
-            src="https://www.facebook.com/tr?id=4013675132213135&ev=PageView&noscript=1" />
-    </noscript>
-    <!-- Fin del Meta Pixel Code -->
+  <!-- ✅ PIXEL DE META -->
+  <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src='https://connect.facebook.net/en_US/fbevents.js';
+    s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script');
 
-    <style>
-        body {
-            font-family: 'Segoe UI', sans-serif;
-            background-color: #ffffff;
-            color: #111b21;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            flex-direction: column;
-        }
+    fbq('init', '4013675132213135'); // 👈 Nuevo píxel
+    fbq('track', 'PageView');
+  </script>
+  <noscript>
+    <img height="1" width="1" style="display:none"
+         src="https://www.facebook.com/tr?id=4013675132213135&ev=PageView&noscript=1"/>
+  </noscript>
 
-        .container {
-            text-align: center;
-            padding: 20px;
-            max-width: 600px;
-            margin: 20px;
-            background-color: white;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            border-radius: 8px;
-        }
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+    }
 
-        h1 {
-            font-family: 'Montserrat', sans-serif;
-            font-weight: bold;
-            font-size: 2.5em;
-            margin-bottom: 20px;
-            letter-spacing: -2px;
-        }
+    body {
+      background-color: #ffffff; /* Fondo blanco */
+      color: #111b21; /* Texto oscuro */
+    }
 
-        p {
-            font-size: 1.2em;
-            margin-bottom: 20px;
-        }
+    header {
+      padding: 20px;
+      text-align: center;
+    }
 
-        .whatsapp-logo {
-            width: 50px;
-            margin-bottom: 20px;
-        }
+    header img {
+      height: 40px;
+    }
 
-        .cta-button {
-            background-color: #25d366;
-            color: white;
-            padding: 15px 30px;
-            font-size: 1.2em;
-            font-weight: bold;
-            border: none;
-            border-radius: 25px;
-            text-decoration: none;
-            display: inline-block;
-            cursor: pointer;
-            margin-top: 20px;
-            transition: background-color 0.3s ease;
-        }
+    main {
+      max-width: 500px;
+      margin: 50px auto;
+      padding: 20px;
+      text-align: center;
+    }
 
-        .cta-button:hover {
-            background-color: #128c7e;
-        }
+    .logo-circle {
+      width: 180px;
+      height: 180px;
+      margin: 0 auto 20px;
+      border-radius: 50%;
+      overflow: hidden;
+    }
 
-        footer {
-            text-align: center;
-            font-size: 13px;
-            color: #999;
-            margin-top: 60px;
-            padding-bottom: 80px;
-        }
-    </style>
+    .logo-circle img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    h1 {
+      font-size: 26px;
+      margin-bottom: 10px;
+      color: #111b21; /* Texto oscuro */
+    }
+
+    h2 {
+      color: #25d366; /* Verde para subtítulos */
+      font-weight: 500;
+      margin-bottom: 20px;
+    }
+
+    .cta-button {
+      background-color: #25d366; /* Verde del botón */
+      color: white;
+      padding: 18px 40px; /* Botón más grande */
+      font-size: 18px; /* Texto más grande */
+      font-weight: bold;
+      border: none;
+      border-radius: 30px; /* Botón más redondeado */
+      text-decoration: none;
+      display: inline-block;
+      margin-bottom: 20px; /* Espacio entre botón y la caja */
+      animation: pulse 1.5s infinite;
+      cursor: pointer;
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+      100% { transform: scale(1); }
+    }
+
+    .cta-box {
+      background-color: #ffffff; /* Fondo blanco */
+      padding: 15px 20px;
+      border-radius: 10px;
+      margin-bottom: 20px;
+      font-size: 16px;
+      color: #111b21; /* Texto oscuro */
+      border: 1px solid #dddddd; /* Borde gris claro */
+    }
+
+    footer {
+      text-align: center;
+      font-size: 13px;
+      color: #999;
+      margin-top: 60px;
+      padding-bottom: 80px;
+    }
+
+    /* Notificaciones */
+    .xpo-notification-wrap {
+      position: fixed;
+      background: #f9f9f9; /* Fondo claro */
+      color: #111b21; /* Texto oscuro */
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      padding: 10px 12px;
+      display: flex;
+      align-items: center;
+      width: 220px; /* Más pequeño */
+      z-index: 9999;
+      border: 1px solid #dddddd; /* Borde gris claro */
+      backdrop-filter: blur(4px);
+      opacity: 0;
+      right: -300px; /* Posición inicial */
+      bottom: 20px; /* Más cerca del borde inferior */
+      transition: all 0.5s ease;
+    }
+
+    .xpo-notification-wrap.show { right: 20px; opacity: 1; } /* Mostrar en la derecha */
+    .xpo-img-wrap img {
+      width: 36px; /* Tamaño reducido */
+      height: 36px;
+      border-radius: 6px;
+      object-fit: cover;
+      border: 1px solid #cccccc; /* Borde claro */
+    }
+
+    .xpo-col { margin-left: 10px; }
+    .xpo-notification-name { font-weight: bold; font-size: 0.9em; color: #111b21; }
+    .xpo-notification-product { font-size: 0.8em; color: #25d366; }
+    .xpo-location { font-size: 0.75em; color: #555555; }
+    .xpo-location::before { content: "📍"; margin-right: 4px; }
+  </style>
 </head>
-
 <body>
-    <!-- Contenedor principal -->
-    <div class="container">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Logo" class="whatsapp-logo">
-        <h1>🎰BONO DE BIENVENIDA🎰</h1>
-        <p>🏆 Los mejores Sl0ts y atención 24 horas 🏆</p>
-        <a href="https://wa.link/marcosgreen2" class="cta-button" target="_blank" id="botonContactar">
-            🍀CLICK ACA PARA CHATEAR🍀
-        </a>
+
+  <header>
+    <img src="https://static.whatsapp.net/rsrc.php/yZ/r/JvsnINJ2CZv.svg" alt="WhatsApp" />
+  </header>
+
+  <main>
+    <div class="logo-circle">
+      <img src="https://i.imgur.com/G09ydIs.jpeg" alt="Nueva Imagen" />
     </div>
 
-    <!-- Barra fija -->
-    <div class="bono-bar" style="position: fixed; bottom: 0; left: 0; width: 100%; background-color: #16a34a; color: white; text-align: center; padding: 10px; font-weight: bold;">
-       ✅Tu usuario es Gratis y lo recibis al instante✅
+    <h1>BONUS DEL 200%🎁</h1>
+    <h2>✅PLATAFORMA VERIFICADA✅</h2>
+
+    <!-- Botón de llamado a la acción -->
+    <a href="https://wa.link/marcosgreen2" 
+       class="cta-button" 
+       onclick="fbq('track', 'Lead');">
+       Ir a WhatsApp Ahora
+    </a>
+
+    <!-- Caja de texto -->
+    <div class="cta-box">
+      Te estamos conectando con nuestro equipo vía WhatsApp.
     </div>
+  </main>
 
-    <!-- Pie de página -->
-    <footer>
-        RedGreen2 todos los derechos reservados.
-    </footer>
+  <footer>
+    © 2025 BC ONLINE. Todos los derechos reservados.
+  </footer>
 
-    <!-- Código JavaScript para registrar el evento "Contact" -->
-    <script type="text/javascript">
-        document.getElementById('botonContactar').addEventListener('click', function() {
-            fbq('track', 'Contact');  // Evento "Contact" de Pixel
-        }, false);
-    </script>
+  <!-- Script de Notificaciones -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const config = {
+        intervalo: 3,
+        duracion: 3,
+        tiempoMaximo: 2,
+        productName: "Premios Enviados🍀",
+        productImage: "https://i.imgur.com/Oyx38be.jpeg" /* Imagen de notificaciones */
+      };
+
+      const nombres = ["Silvina Santos", "Juan Rodriguez", "Carlos Alvidia", "Laura Montes", "Lucio Avalos"];
+      const ciudades = ["Buenos Aires", "Córdoba", "Entre Rios", "Tucuman", "Buenos Aires"];
+
+      function getRandom(arr) {
+        return arr[Math.floor(Math.random() * arr.length)];
+      }
+
+      function getTimeAgo() {
+        const h = Math.floor(Math.random() * config.tiempoMaximo);
+        const m = Math.floor(Math.random() * 60);
+        return h === 0 ? `hace ${m} minutos` : `hace ${h} hora${h > 1 ? 's' : ''}`;
+      }
+
+      function showNotification() {
+        const nombre = getRandom(nombres);
+        const ciudad = getRandom(ciudades);
+        const tiempo = getTimeAgo();
+
+        const noti = document.createElement("div");
+        noti.className = "xpo-notification-wrap";
+        noti.innerHTML = `
+          <div class="xpo-img-wrap">
+            <img src="${config.productImage}" alt="Premio">
+          </div>
+          <div class="xpo-col">
+            <div class="xpo-notification-name">${nombre}</div>
+            <div class="xpo-notification-product">${config.productName}</div>
+            <div class="xpo-location">Desde ${ciudad} • ${tiempo}</div>
+          </div>
+        `;
+        document.body.appendChild(noti);
+        setTimeout(() => noti.classList.add("show"), 100);
+        setTimeout(() => {
+          noti.classList.remove("show");
+          setTimeout(() => noti.remove(), 500);
+        }, config.duracion * 1000);
+      }
+
+      showNotification();
+      setInterval(showNotification, config.intervalo * 1000);
+    });
+  </script>
+
 </body>
-
 </html>
